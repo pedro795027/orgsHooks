@@ -14,7 +14,13 @@ const styles = StyleSheet.create({
         marginTop: 24,
         fontSize: 26,
         fontWeight: 'bold',
-        color: '#000',
+        color: '#464646',
+    },
+    legenda: {
+        marginTop: 24,
+        fontSize: 16,
+        fontWeight: '300',
+        color: '#A3A3A3',
     }
 });
 
