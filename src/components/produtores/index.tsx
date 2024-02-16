@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Text } from "react-native"
+import { FlatList, Text } from "react-native"
 import { CarregaProdutores } from "../../services/carregaDados";
 
 interface Produtor {
@@ -21,9 +21,16 @@ export default function Produtores(){
 
     }, []);
 
+    const TopoLista = () => {
+        return <Text> { titulo } </Text>
+    }
+
     return (
-        <Text>
-            {titulo}
-        </Text>
+        <FlatList 
+        data={lista}
+        renderItem={({item: {nome}}) => <Text> {nome} </Text>}
+        ListHeaderComponent={TopoLista}
+        />
+        
     )
 }
